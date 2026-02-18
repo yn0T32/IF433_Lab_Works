@@ -10,6 +10,7 @@ class Employee(name:String) {
             field = value
         }
     }
+    var name: String = "ayam"
     val tax: Double
         get()=salary * 0.1;
     private var performanceRating: Int = 3
@@ -18,7 +19,7 @@ class Employee(name:String) {
         performanceRating++
         println("Kinerja $name meningkat! Rating: $performanceRating")
     }
-
+//
     fun printStatus(){
         println("Karyawan: $name, rating: $performanceRating")
     }
