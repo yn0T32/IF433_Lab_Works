@@ -7,8 +7,12 @@ fun main(){
     generalVehicle.accelerate()
 
     println("\n--- Testing Car ---")
-    val myCar = Car("Toyota", 4)
+    val myCar = Car("Toyota", 4, 0)
     myCar.accelerate()
     myCar.openTrun()
     myCar.honk()
+
+    println("\n--- Testing EV ---")
+    val myEv = ElectricCar()
+    myEv.accelerate()
 }
