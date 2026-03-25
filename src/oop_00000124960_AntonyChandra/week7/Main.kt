@@ -2,7 +2,7 @@ package oop_00000124960_AntonyChandra.week7
 
 import javax.xml.crypto.Data
 
-fun Main (){
+fun Main () {
     println("=== TEST SINGLETON ===")
     println("Status: ${DatabaseManager.connectionStatus}")
     DatabaseManager.connect()
@@ -25,7 +25,9 @@ fun Main (){
     println("\n=== TEST SEALED CLASS ===")
     val response: ApiResponse = ApiResponse.Success("Data berhasil di tarik")
     val uiMessage = when(response){
+        ApiResponse.Loading -> "Loading..."
         is ApiResponse.Success -> "Tampilkan: ${response.data}"
         is ApiResponse.Error -> "Munculkan Error: ${response.message}"
     }
+    println(uiMessage)
 }
