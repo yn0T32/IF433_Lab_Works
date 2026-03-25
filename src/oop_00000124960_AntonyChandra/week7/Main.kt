@@ -1,6 +1,8 @@
 package oop_00000124960_AntonyChandra.week7
 
-fun Main {
+import javax.xml.crypto.Data
+
+fun Main (){
     println("=== TEST SINGLETON ===")
     println("Status: ${DatabaseManager.connectionStatus}")
     DatabaseManager.connect()
@@ -10,8 +12,8 @@ fun Main {
     client.connect()
 
     println("\n=== TEST REGULAR CLASS ===")
-    val reg1 = RegularUsers("Alice", 22)
-    val reg2 = RegularUsers("Alice", 22)
-    println(reg1)
-    println("Sama? ${reg1 == reg2}")
+    val data1 = DataUsers("Alice", 22)
+    val data2 = DataUsers("Alice", 22)
+    println(data1)
+    println("Sama? ${data1 == data2}")
 }
